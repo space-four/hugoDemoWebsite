@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section id="main">
+    <div>
+        <div class="flex flex-center">
+            <article id="basicContent">
+                <div>
+                    <h1 id="title">{{ .Title }}</h1>
+                    <h4 class="lastUpdate"> Zuletzt aktualisiert am: <span class="lastUpdate__Date">{{ .Date.Format "Jan 2, 2006" }}</span> </h4> <!-- Edit Front Matter in respective File in `Content` to update this date -->
+                    {{ .Content }}
+                </div>
+            </article>
+        </div>
+  </div>
+</section>
+{{ end }}

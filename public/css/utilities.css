@@ -1,0 +1,102 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+/* Display Commands */
+
+.displayNone__desktop {
+  display: none;
+}
+
+@media (max-width: 55em) {
+.displayNone__desktop {
+  display: inline;
+}
+}
+
+/* Utilities */
+
+/* Wrappers */
+
+.wrapper__width1400 {
+  max-width: 1400px;
+}
+
+.wrapper__width1200 {
+  max-width: 1200px;
+}
+
+.wrapper__width1000{
+  max-width: 1000px;
+}
+
+.wrapper__width800{
+  max-width: 800px;
+}
+
+/* Grid Instruction */
+
+.grid {
+  display: grid;
+}
+
+/* Flex Instructions*/
+
+.flex {
+    display: flex;
+  }
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.align-items__center {
+  align-items: center;
+}
+
+.justify-content__center {
+justify-content: center;
+}
+
+.flexDirection__column {
+  flex-direction: column;
+}
+
+.flex__column-50 {
+  width: 50%;
+}
+
+.flex__column-30 {
+  width: 30%;
+}
+
+.flex__noWrap {
+  flex-wrap: nowrap;
+}
+
+.flex__directionColumn {
+  flex-direction: column;
+}
+
+
+@media (max-width: 1000px) {
+  .flex {
+    gap: var(--gap, 1rem)
+  }
+
+  .flex_colum-50_break {
+      flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+}

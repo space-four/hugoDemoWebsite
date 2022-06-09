@@ -1,0 +1,30 @@
+#basicContent {
+    margin: 100px 0;
+    max-width: 70%;
+}
+
+.lastUpdate {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.lastUpdate__Date {
+    color: var(--primary-color);
+}
+
+#basicContent h1,h2,h3,h4,h5,h6 {
+    margin: 20px 0;
+}
+
+#basicContent h1 {
+    font-weight: 700;
+}
+
+#basicContent h2 {
+    font-weight: 600;
+}
+
+#basicContent li {
+    list-style: none;
+}
+

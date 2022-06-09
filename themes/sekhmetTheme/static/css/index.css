@@ -1,0 +1,210 @@
+/* Page Specific Styles */
+
+
+/********************************/
+  /*Hero-Section*/
+
+  .hero-section {
+    padding: 150px 0;
+    border-radius: 0 0 30px 30px;
+    background-color: var(--beige);
+  }
+
+  .hero-content {
+    gap: 50px;
+    padding: 0 50px;
+  }
+
+  .hero-paragraph {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img{
+    max-width: 400px;
+    box-shadow: -10px 10px 0px 0px #5987FF;
+  }
+
+  .heroSection__contactButton {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 55em) {
+    .hero-section {
+      padding: 100px 0;
+      flex-direction: column;
+    }
+
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-image img{
+      max-width: 100%;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+  }
+
+/*************************************************/
+
+/* Sponsor Section */
+
+#sponsors-section {
+  padding: 150px 20px;
+}
+
+.sponsorsSection__sectionHead {
+  max-width: 800px;
+}
+
+.logoGrid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  margin: 50px 0px;
+}
+
+.logoGrid__clientLogo {
+ max-width: 100%; 
+}
+
+@media screen and (max-width: 650px)
+{
+.logoGrid {
+  grid-template-columns: 1fr 1fr;;
+}
+}
+/*************************************************/
+
+/* Study Team Section */
+
+#studyTeam {
+  padding: 150px 50px;
+}
+
+.studyTeam__sectionHead {
+  max-width: 800px;
+}
+
+.studyTeam__membersGrid{
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 35px;
+  margin: 35px 0;
+}
+
+#studyTeam img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.studyTeam__imageSignature {
+  margin: 35px 0;
+}
+
+.studyTeam__imageSignature h4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #studyTeam {
+    padding: 100px 20px;
+  }
+
+  .studyTeam__membersGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .studyTeam__sectionHead {
+    padding: 20px 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  #studyTeam {
+    padding: 100px 20px;
+  }
+
+  .studyTeam__membersGrid {
+    grid-template-columns: 1fr;
+  }
+}
+  
+
+/*************************************************/
+
+/* FAQ Section mit Akkordeon*/
+
+#faqSection {
+    min-height: 600px;
+    background-color: var(--grey__2);
+    padding: 100px 0;
+}
+
+.contentWrapper {
+    max-width: 1000px;
+}
+
+
+#faq__accordion {
+    width: 600px;
+}
+
+.faq__textContent{
+    padding: 0 40px;
+}
+
+.accordion-button {
+    background-color: var(--primary-color__tint);
+    color: white;
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color__tint);
+    color:  white;
+    font-weight: 500;
+}
+
+.accordion-button.collapsed::after {
+    fill: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    fill: white;
+}
+
+.accordion-body {
+    background-color: var(--grey__2);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .faq__textContent{
+        padding: 20px;
+    }
+
+    .faq__accordionContent {
+        padding: 20px;
+    }
+
+    #faq__accordion {
+        width: 100%;
+    }
+
+    }
+
+@media screen and (max-width: 500px) {
+    .faq__accordionContent {
+        padding: 0px;
+    }
+}

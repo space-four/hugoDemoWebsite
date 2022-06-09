@@ -1,0 +1,335 @@
+/* Header // Responsive Navbar*/
+
+
+#primaryHeader {
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--beige);
+
+    min-height: 70px;
+    margin-bottom: -70px;
+
+    transition: all 0.15s linear;
+}
+
+#primaryHeader.active {
+  /* Class is added via headerShadow.js to enable Dropshadow on Scroll */
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);   
+}
+
+.primaryHeader__navigation__navList {
+    list-style: none;
+  
+    padding: 1rem;
+    align-items: center;
+  
+    font-family: var(--primary-font), sans-serif;
+    font-weight: 500;
+}
+
+.primaryHeader__navigation__navList li {
+    margin-inline-end: 0.75rem;
+    font-size: 16px;
+    font-family: var(--primary-font);
+  }
+  
+.primaryHeader__navigation__navLink {
+    text-decoration: none;
+    color: black;
+}
+
+.primaryHeader__logo {
+    margin: 1rem;
+    z-index: 9999;
+    font-size: 28px;
+    font-weight: 600;
+
+    font-family: var(--primary-font);
+}
+
+.mobile-nav-toggle {
+    z-index: 9999;
+    display: none; /* Nav Toggle is removed from DOM on desktop */
+  }
+
+@media screen and (max-width: 55em) {
+
+  .primaryHeader__logo {
+    font-size: 23px;
+  }
+
+    .primaryHeader__navigation__navList {
+    max-width: 100%;
+    background-color: #fff0e5;
+    
+    z-index: 1000;
+    position: fixed;
+    inset: 0 0 0 0%; /* Controls "width" of mobile nav component */
+    
+    flex-direction: column;
+    padding: min(20vh, 10rem) 3em; /* Min-Function for Padding to improve landscape mode of mobile devices */
+    align-items: baseline;
+    
+    transform: translateX(100%); /* Per Default main navigation is pushed out of viewport (to the right) so user can´t see */
+    transition: transform 350ms ease-out;
+    }
+
+    .primaryHeader__navigation__navList li {
+        font-size: 20px;
+        justify-content: center;
+    }
+    
+    /* navBar.js looks if data-visible is true. if user clicks on navtoggle data visible is set to true. if true then, the nav-slides out. */
+    .primaryHeader__navigation__navList[data-visible="true"] {
+      transform: translateX(0%);
+    }
+  
+    /* Per default -> Closed-Icon is displayed. */
+    .mobile-nav-toggle {
+      position: relative; /* Necessary to put toggle to front, because Z-Index doesn´t work with position fixed of parent*/
+      display: block;
+      
+      background: url('../image/navToggle/icons8-menu-rounded-48.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      margin: 1rem;
+      width: 1.75rem;
+      aspect-ratio: 1;
+      border: 0;
+      z-index: 1000;
+    }
+    
+    /* When aria-expanded is set to true by navbar.js -> other toggle-icon is displayed*/
+    .mobile-nav-toggle[aria-expanded="true"] {
+      background: url('../image/navToggle/icons8-menu-rounded-48.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 1.75rem;
+    }
+  }
+
+/*****************************************/
+
+/* GLOBAL CTA SECTION */
+
+#ctaSection {
+  padding: 75px 20px;
+  background-image: url("../image/media/background_ctaSection_demo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*
+  Original Image can be purchased here: https://www.shutterstock.com/image-illustration/background-multicolored-smooth-modern-blue-abstrackt-1917211907
+  */
+}
+
+.ctaSection__headline {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.ctaSection__paragraph {
+  font-size: 21px;
+  color: white;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+  .ctaSection__headline {
+    font-size: 40px;
+  }
+
+  .ctaSection__paragraph {
+    font-size: 18px;
+  }
+}
+
+/*****************************************/
+
+/* FOOTER */
+
+footer {
+  padding: 100px 0;
+  background-color: var(--beige);
+  box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.20);
+}
+
+.footer__navGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin: 0 20px;
+}
+
+.footer-logo {
+  max-width: 300px;
+  /*grid-column: 3 / span 2;*/
+}
+
+.footer__lists li {
+  list-style: none;
+  font-weight: 500;
+  margin: 5px 10px;
+}
+
+.footer__listHeading {
+  font-weight: 700;
+}
+
+.footer__navLink {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer__navGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    max-width: 600px;
+  }
+
+  .footer__logoContainer {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .footer__navlist {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .footer__contactList {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .footer__ctaContainer {
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  .footer__navGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+  }
+
+  .footer__logoContainer {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .footer__navlist {
+    grid-row: 2;
+  }
+
+  .footer__contactList {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .footer__ctaContainer {
+    grid-row: 4;
+  }
+}
+
+/********************************/
+
+/* SPACE FOUR HINT */
+
+.spaceFourHint {
+  padding: 0;
+  margin: 0;
+}
+
+.spaceFourHint p {
+  text-align: center;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.spaceFourHint p a {
+  text-decoration: none;
+  color: #6247aa;
+}
+
+.spaceFourHint p a:hover {
+  color: var(--primary-color)
+}
+
+/********************************/
+
+/* Miscellaneous */
+
+.placeholder_200{
+  min-height: 200px;
+}
+
+/*********************************/
+
+/* Button Styles */
+
+.button {
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  display: inline-flex;
+  border: 2px solid var(--primary-color);
+}
+
+.button__small {
+  padding: 7px 15px;
+}
+
+.button__normal {
+  padding: 10px 30px;
+  margin: 10px 0;
+}
+
+.button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.button__primary {
+  color: white;
+  background-color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.button__primary:hover {
+  color: white;
+}
+
+.button__primaryInverted {
+  border: 3px white solid;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.button__primaryInverted:hover {
+  opacity: 0.8;
+}
+
+.button__secondary {
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.button__secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

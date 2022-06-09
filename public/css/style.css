@@ -1,0 +1,95 @@
+/*Brand Basics*/
+
+:root {
+    --primary-font: 'Raleway';
+    
+    --primary-color: #068ac5;
+
+    --secondary-color: #C46E06;
+    
+    --primary-color__tint: #0b8bc7;
+    --primary-color__tint2: #2caae4;
+    --primary-color__tint3: #c6edff;
+
+    --primary-color__shade: #023045;
+
+    --grey__2: #f4f5f7;
+    --grey__3: #a1a4aa;
+
+    --beige: #fff0e5;
+}
+
+/*****************************/
+
+/* General Styles and Basics */
+body {
+    font-family: var(--primary-font);
+}
+
+html, body {
+    width: auto !important;
+}
+
+.label__small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.label__extraSmall {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+p {
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.accentHeading {
+    /* To be used "above" actual/normal heading */
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.accentHeading:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    left: 0;
+  }
+
+
+.basicHeading {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+}
+
+/***************************/
+
+/* Box Shadows */
+
+.boxShadow__1 {
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2); 
+}

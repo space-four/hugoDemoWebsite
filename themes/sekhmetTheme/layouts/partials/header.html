@@ -1,0 +1,27 @@
+    <!-- Header Navigation Bar-->
+
+    <header id="primaryHeader" class="flex">
+        <div class="primaryHeader__logo">Studienname</div>
+        <nav>
+
+            <ul id="nav" class="primaryHeader__navigation__navList flex" data-visible="false">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}"><a class="primaryHeader__navigation__navLink" href=" {{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+                <li><a class="button button__small button__primary" href="#">Jetzt registrieren</a></li>
+                <li class="displayNone__desktop"><p class="label__small">Nach dem Klick auf diesen Button landen Sie im Alcedis Patient Center, wo Sie sich registrieren können.</p></li>    
+            </ul>
+            
+            <!-- OLD HEADER IMPLEMENTATION
+            <ul class="primaryHeader__navigation__navList flex" data-visible="false">
+                <li><a class="primaryHeader__navigation__navLink" href="#">Studienziele</a></li>
+                <li><a class="primaryHeader__navigation__navLink" href="#">Ablauf der Studie</a></li>
+                <li><a class="primaryHeader__navigation__navLink" href="#">Kontakt</a></li>
+                <li><a class="button button__small button__primary" href="#">Jetzt registrieren</a></li>
+                <li class="displayNone__desktop"><p class="label__small">Nach dem Klick auf diesen Button landen Sie im Alcedis Patient Center, wo Sie sich registrieren können.</p></li>
+            </ul>
+            -->
+            <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false"></button>
+        </nav>
+    </header>

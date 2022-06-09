@@ -1,0 +1,17 @@
+baseURL = '//sekhmet.space-4.de'
+languageCode = 'de-DE'
+title = 'Sekhmet'
+theme = 'sekhmetTheme'
+
+[menu]
+    [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.main]]
+    identifier = "nutzungsbedingungen"
+    name = "Nutzungsbedingungen"
+    url = "/nutzungsbedingungen/"
+    weight = 2
